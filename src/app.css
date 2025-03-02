@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Stardom";
+  src: url("/Stardom-Regular.otf") format("opentype");
+}
+
+:root {
+  font-family: "Stardom", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @apply bg-neutral-900 text-white;
+}
+
+h1 {
+	@apply font-bold text-[8rem] leading-[1.1];
+}
+
+html, body, #app {
+	@apply h-full;
+}
+
+#app {
+	@apply p-10;
+}
+
