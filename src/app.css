@@ -1,29 +1,35 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Stardom";
-  src: url("/Stardom-Regular.otf") format("opentype");
+	font-family: "Stardom";
+	src: url("/Stardom-Regular.otf") format("opentype");
 }
 
-:root {
-  font-family: "Stardom", system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @apply bg-neutral-900 text-white;
+@font-face {
+	font-family: "Boska";
+	src: url("/Boska-Variable.ttf") format("truetype");
 }
 
-h1 {
-	@apply font-bold text-[8rem] leading-[1.1];
+@theme {
+	--color-primary: var(--color-neutral-200);
+	--font-serif: "Boska", system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
-html, body, #app {
-	@apply h-full;
-}
+@layer base {
+	:root {
+	  @apply bg-neutral-900 text-primary font-serif;
+	}
 
-#app {
-	@apply p-10;
+	h1 {
+		@apply font-normal;
+	}
+
+	html, body, #app {
+		@apply h-full;
+	}
+
+	#app {
+		@apply p-10;
+	}
 }
 
